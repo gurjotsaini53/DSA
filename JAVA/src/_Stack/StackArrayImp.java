@@ -1,4 +1,4 @@
-package Stack;
+package _Stack;
 
 public class StackArrayImp {
 
