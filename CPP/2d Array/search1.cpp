@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void search(int n, int key, int arr[][n])
+void search(int n, int key, int arr[][10])
 {
 
     for (int i = 0; i < n; i++)
@@ -33,5 +33,5 @@ int main()
         }
     }
     cin >> key;
-    search(n, arr, key);
+    search(n, key,arr);
 }
