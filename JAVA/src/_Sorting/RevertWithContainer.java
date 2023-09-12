@@ -9,13 +9,14 @@ public class RevertWithContainer {
 
         for (int x:arr)
         {
-            s1.add(x);
+            s1.push(x);
         }
 
         for (int i=0;i<size;i++)
         {
             arr[i]=s1.pop();
         }
+
     }
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
@@ -26,7 +27,7 @@ public class RevertWithContainer {
             System.out.print(x+ " ");
         }
         System.out.println();
-        
+
         RevertWithContainer(arr,size);
 
         for (int x:arr)
