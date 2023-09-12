@@ -1,3 +1,5 @@
+package _Searching;
+
 public class LinearSearch {
 
 

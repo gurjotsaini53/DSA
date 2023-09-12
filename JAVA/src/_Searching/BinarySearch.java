@@ -1,4 +1,4 @@
-package _Strings;
+package _Searching;
 
 public class BinarySearch {
 
