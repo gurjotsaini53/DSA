@@ -29,7 +29,7 @@ public class Hostel {
          int i=0;
          while (i<N)
          {
-            String name = in.nextLine();
+            String name = input.nextLine();
          addStudent(name);
          i++;
 
