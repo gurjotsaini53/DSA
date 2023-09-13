@@ -68,7 +68,7 @@ public class RomanToInteger {
         return res;
     }
     public static void main(String[] args) {
-        String romanNumber = "XIV" ;
+        String romanNumber = "XVII" ;
         System.out.println(RomanToIntegerFunc(romanNumber));
     }
 }
