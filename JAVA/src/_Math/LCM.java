@@ -25,7 +25,24 @@ class LcmOfTwoNumbers {
              }
              return ans;
     }
+    public static  int getGcd(int n1,int n2){
+        int gcd , remainder;
 
+        while (n1%n2 !=0)
+        {
+            remainder = n1 % n2;
+
+            n1=n2;
+            n2=remainder;
+        }
+        gcd = n2;
+        return gcd;
+    }
+
+    public int getLcm() {
+      return  (a*b)/getGcd(a,b);
+
+    }
 }
 public class LCM {
 
@@ -40,6 +57,7 @@ public class LCM {
 
         LcmOfTwoNumbers lcm = new LcmOfTwoNumbers(a,b);
         System.out.println(lcm.LCM());
+        System.out.println(lcm.getLcm());
 
     }
 }

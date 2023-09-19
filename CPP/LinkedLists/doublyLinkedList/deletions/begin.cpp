@@ -14,26 +14,6 @@ class Node{
     }
 };
 
-void printReverseList(Node *head)
-{
-    Node *ptr = head ; 
-
-    if(ptr==NULL) cout<<"list is empty"<<endl; 
-    else{
-        while(ptr->next!=NULL)
-        {
-            ptr=ptr->next;
-        }
-        while(ptr!=NULL)
-        {
-            cout<<ptr->data<<" ";
-            ptr=ptr->prev;
-        }
-
-        cout<<"\n";
-    }
-}
-
 void popBegin(Node *&head)
 {
    
@@ -85,6 +65,6 @@ int main(){
      cout<<"After removing first"<<endl;
      popBegin(head);
      printList(head);
-     printReverseList(head);
+  
     return 0;
 }

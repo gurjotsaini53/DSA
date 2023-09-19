@@ -14,38 +14,6 @@ class Node{
     }
 };
 
-int countList(Node *head)
-{
-
-    int count=0;
-    Node *ptr=head;
-    while(ptr!=NULL)
-    {
-   count++;
-   ptr=ptr->next;
-    }
-    return count;
-}
-void printReverseList(Node *head)
-{
-    Node *ptr = head ; 
-
-    if(ptr==NULL) cout<<"list is empty"<<endl; 
-    else{
-        while(ptr->next!=NULL)
-        {
-            ptr=ptr->next;
-        }
-        while(ptr!=NULL)
-        {
-            cout<<ptr->data<<" ";
-            ptr=ptr->prev;
-        }
-
-        cout<<"\n";
-    }
-}
-
 void popMiddle(Node *&head, int pos)
 {
       int TotalNodes  = countList(head);
@@ -131,6 +99,5 @@ int main(){
      printList(head);
      popMiddle(head,2);
      printList(head);
-     printReverseList(head);
     return 0;
 }
