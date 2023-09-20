@@ -1,6 +1,6 @@
 package _Stack;
 
-public class StackArrayImp {
+public class StackArrayImplementation {
 
     private final static int  default_capacity = 10;
     private int top;
@@ -9,14 +9,14 @@ public class StackArrayImp {
 
 
 
-    public StackArrayImp(int size)
+    public StackArrayImplementation(int size)
     {
         maxSize=size;
         StackArray = new int[maxSize];
 
         top=-1;
     }
-    public StackArrayImp(){
+    public StackArrayImplementation(){
         this(default_capacity);
     }
 
@@ -57,11 +57,23 @@ public class StackArrayImp {
     public void push(int value){
         if (isFull())
         {
-        //   System.out.println("Can't add stack is full - stack Overflow");
-       // return;
+            throw  new RuntimeException("Stack is Full");
 
-            resize(maxSize*2);
-             push(value);
+/*
+            {
+                System.out.println("Can't add stack is full - stack Overflow");
+                return;
+            }
+
+ */
+
+            /*
+            {
+                    resize(maxSize*2);
+                     push(value);
+            }
+
+            */
 
         }
         else{
@@ -95,7 +107,7 @@ public class StackArrayImp {
     public static void main(String[] args) {
 
 
-        StackArrayImp s1= new StackArrayImp(10);
+        StackArrayImplementation s1= new StackArrayImplementation(10);
 
         s1.push(10);
         s1.push(20);

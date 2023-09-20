@@ -7,8 +7,7 @@ public class PrimeNumbers {
 //        for (int i=0;i<=n-1;i++)
 //        for (int i=0;i<=Math.pow(n,0.5);i++)
 //        for (int i=0;i*i<=n;i++)
-//        for (int i=0;i<=n/i;i++)
-
+        for (int i=0;i<=n/i;i++)
 
         {
 
