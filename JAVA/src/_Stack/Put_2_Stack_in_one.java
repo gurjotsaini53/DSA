@@ -20,16 +20,20 @@ public class Put_2_Stack_in_one {
         s2.push(50);
         s2.push(60);
 
+
+        // put s1 in s2
         s2.push(s1.pop());
         s2.push(s1.pop());
         s2.push(s1.pop());
 
 
-        // put s2(s1) content in s1
+        // put s2(s1) content in res
 
         res.push(s2.pop());
         res.push(s2.pop());
-        res.push(s2.pop());
+        res.push(s2.pop(
+
+        ));
 
         // put s2 in s1
 
