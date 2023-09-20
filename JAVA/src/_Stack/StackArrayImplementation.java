@@ -57,7 +57,7 @@ public class StackArrayImplementation {
     public void push(int value){
         if (isFull())
         {
-            throw  new RuntimeException("Stack is Full");
+            //throw  new RuntimeException("Stack is Full");
 
 /*
             {
@@ -67,13 +67,13 @@ public class StackArrayImplementation {
 
  */
 
-            /*
-            {
+
+
                     resize(maxSize*2);
                      push(value);
-            }
 
-            */
+
+
 
         }
         else{
@@ -107,7 +107,7 @@ public class StackArrayImplementation {
     public static void main(String[] args) {
 
 
-        StackArrayImplementation s1= new StackArrayImplementation(10);
+        StackArrayImplementation s1= new StackArrayImplementation();
 
         s1.push(10);
         s1.push(20);
