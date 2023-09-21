@@ -1,4 +1,4 @@
-package _Stack;
+package _Stack.Ques;
 
 import java.util.Stack;
 
@@ -31,13 +31,18 @@ public class SortAStack {
         while (!_stack.empty()) {
             int current_popped_value = _stack.pop();
 
+            // using the concept of insertion sort
+            // we sort the stack by placing them in their
+            // right position
+
+
             while (!temp_stack.empty() && temp_stack.peek() > current_popped_value) {
              _stack.push(temp_stack.pop());
             }
             temp_stack.push(current_popped_value);
         }
 
-        // fill element in _Stack
+        // fill element from temp stack to the _stack
 
         while (!temp_stack.empty())
         {

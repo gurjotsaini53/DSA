@@ -1,4 +1,6 @@
-package _Stack;
+package _Stack.Ques;
+
+import _Stack.StackArrayImplementation;
 
 public class Put_2_Stack_in_one {
     public static void main(String[] args) {
