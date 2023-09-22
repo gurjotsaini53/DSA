@@ -4,6 +4,13 @@ import org.omg.Messaging.SyncScopeHelper;
 
 
 //Queue is data structure which follow  FIFO principle (first in first out)
+
+//The Queue interface is present in the java.util package.
+//It is an ordered list of objects that follows the FIFO (First-In-First-Out) principle.
+
+//The Queue is used to insert elements at the end of the queue and removes elements from the beginning of the queue.
+// It supports all methods of Collection interface including insertion, deletion etc.
+// LinkedList, ArrayBlockingQueue and PriorityQueue are the most commonly used implementations.
 public class Queue {
 
     private static  final int defaultCapacity=10;
@@ -63,7 +70,7 @@ public class Queue {
 
 
     // insert element at rear
-    public void insert(int value)
+    public void enqueue(int value)
     {
         if (isFull())
         {
@@ -76,7 +83,7 @@ public class Queue {
     }
 
     // remove first element
-    public int remove() {
+    public int dequeue() {
         int temp;
         if (isEmpty()) {
             return -1;
@@ -92,10 +99,10 @@ public class Queue {
     public static void main(String[] args) {
         Queue q1= new Queue(4);
         System.out.println(q1.isEmpty());
-        q1.insert(10);
-        q1.insert(20);
-        q1.insert(30);
-        q1.insert(40);
+        q1.enqueue(10);
+        q1.enqueue(20);
+        q1.enqueue(30);
+        q1.enqueue(40);
 
         System.out.println(q1.isFull());
 //        q1.insert(50);  // ERROR cannot add element to queue as stack is full
@@ -105,7 +112,7 @@ public class Queue {
         System.out.println(q1.peekFront()); // 10
         System.out.println(q1.peekRear()); // 40
 
-        q1.remove();  // remove 10
+        q1.dequeue();  // remove 10
 
         System.out.println(q1.peekFront()); // 20
     }
