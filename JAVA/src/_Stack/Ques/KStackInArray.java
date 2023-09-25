@@ -52,7 +52,7 @@ public class KStackInArray {
     }
 
 
-    public boolean push(int stackNumber, int value) {
+    public void push(int stackNumber, int value) {
         int index = free_slot;
         free_slot = next[index];
         next[index] = top[stackNumber];
