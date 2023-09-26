@@ -64,6 +64,21 @@ public class SinglyLLCreate {
     }
 
 
+
+    public int search(Node head , int key)
+    {
+        Node ptr = head;
+        int pos = 1 ;
+        while (ptr!=null){
+            if (ptr.data==key)
+            {
+                return pos;
+            }
+            pos++;
+            ptr=ptr.next;
+        }
+      return -1;
+    }
     public int CountNode(Node head)
     {
         Node ptr = head;
@@ -119,5 +134,8 @@ public class SinglyLLCreate {
         obj.deleteAtHead();
 
     obj.printSLL(obj.head);
+
+        System.out.println(obj.search(obj.head,200));
+
     }
 }
