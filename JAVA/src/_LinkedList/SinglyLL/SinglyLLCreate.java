@@ -64,6 +64,39 @@ public class SinglyLLCreate {
     }
 
 
+    public int CountNode(Node head)
+    {
+        Node ptr = head;
+        int count = 0 ;
+        while (ptr!=null){
+            ptr=ptr.next;
+            count++;
+        }
+        return count;
+    }
+  public void InsertAtMiddle(Node head, int pos)
+  {
+
+      if (pos==1){
+
+      }
+  }
+
+  public Node deleteAtHead()
+  {
+      if (head==null){
+          System.out.println("List in empty");
+          return null;
+      }
+      else
+      {
+          Node temp = head;
+          head=head.next;
+          temp.next=null;
+          return head;
+
+      }
+  }
     public static void main(String[] args) {
     SinglyLLCreate obj = new SinglyLLCreate();
 
@@ -83,6 +116,7 @@ public class SinglyLLCreate {
     obj.InsertAtTail(100);
         obj.InsertAtTail(200);
 
+        obj.deleteAtHead();
 
     obj.printSLL(obj.head);
     }
