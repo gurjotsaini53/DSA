@@ -41,7 +41,7 @@ public class PrimeFactors {
     public static void main(String[] args) {
         PrimeFactor(13);
         System.out.println();
-        PrimeFactor1(315);
+        PrimeFactor1(121);
 
     }
 }

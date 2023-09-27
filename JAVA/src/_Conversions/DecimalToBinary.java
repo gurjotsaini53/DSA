@@ -3,7 +3,7 @@ package _Conversions;
 public class DecimalToBinary {
 
 
-    public static String decimal(int n)
+    public static String decimalToBinary(int n)
     {
         String ans = "";
 
@@ -19,7 +19,7 @@ public class DecimalToBinary {
     }
     public static void main(String[] args) {
         int n = 70000000;
-        StringBuilder ans = new StringBuilder(decimal(n));
+        StringBuilder ans = new StringBuilder(decimalToBinary(n));
         System.out.println(ans.reverse());
 
     }
