@@ -1,17 +1,25 @@
 package _LinkedList.SinglyLL;
 
 
-
-public class SinglyLLCreate {
-    class Node{
-        int data;
-        Node next ;
-        Node (int x)
-        {
-            this.data=x;
-            this.next = null;
-        }
+class Node{
+    int data;
+    Node next ;
+    Node (int x)
+    {
+        this.data=x;
+        this.next = null;
     }
+}
+
+
+///  a singly linked list contain operations
+
+// 1. traversal
+//2. searching
+//3. insertion (begin , end , middle)
+//4. deletion (begin , end , middle)
+//5. CountList
+public class SinglyLLCreate {
 
     Node head;
 
@@ -20,7 +28,61 @@ public class SinglyLLCreate {
         head = null;
     }
 
+// traveral in singly linked list
 
+    public void printSLL(Node head)
+    {
+        Node ptr = head;
+
+        while (ptr!=null)
+        {
+            System.out.print(ptr.data + " -> ");
+            ptr=ptr.next;
+        }
+
+        System.out.println();
+    }
+
+
+    // searching
+
+    public void Search(Node head, int key)
+    {
+        int k = 1;
+
+        Node ptr = head;
+        while (ptr!=null)
+        {
+
+            if (ptr.data==key)
+            {
+                System.out.println("value found at "  + k + "th Node");
+                return;
+            }
+            k++;
+            ptr=ptr.next;
+        }
+
+        System.out.println("Not Found");
+    }
+
+    public int search(Node head , int key)
+    {
+        Node ptr = head;
+        int pos = 1 ;
+        while (ptr!=null){
+            if (ptr.data==key)
+            {
+                return pos;
+            }
+            pos++;
+            ptr=ptr.next;
+        }
+        return -1;
+    }
+
+
+    // insertions in singly linked list
     public  Node InsertAtHead(int data)
     {
         Node newNode = new Node(data);
@@ -28,6 +90,8 @@ public class SinglyLLCreate {
         head = newNode;
         return head;
     }
+
+
     public  Node InsertAtTail(int data)
     {
         Node newNode = new Node(data);
@@ -50,35 +114,10 @@ public class SinglyLLCreate {
     }
 
 
-    public void printSLL(Node head)
-    {
-        Node ptr = head;
-
-        while (ptr!=null)
-        {
-            System.out.print(ptr.data + " -> ");
-            ptr=ptr.next;
-        }
-
-        System.out.println();
-    }
 
 
 
-    public int search(Node head , int key)
-    {
-        Node ptr = head;
-        int pos = 1 ;
-        while (ptr!=null){
-            if (ptr.data==key)
-            {
-                return pos;
-            }
-            pos++;
-            ptr=ptr.next;
-        }
-      return -1;
-    }
+
     public int CountNode(Node head)
     {
         Node ptr = head;
@@ -89,12 +128,9 @@ public class SinglyLLCreate {
         }
         return count;
     }
-  public void InsertAtMiddle(Node head, int pos)
+  public void InsertAtMiddle(Node head, int pos, int val)
   {
 
-      if (pos==1){
-
-      }
   }
 
   public Node deleteAtHead()
@@ -136,6 +172,7 @@ public class SinglyLLCreate {
     obj.printSLL(obj.head);
 
         System.out.println(obj.search(obj.head,200));
+        obj.Search(obj.head,200);
 
     }
 }
