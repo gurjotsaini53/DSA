@@ -118,7 +118,7 @@ public class SinglyLLCreate {
 
 
 
-    public int CountNode(Node head)
+    public static int CountNode(Node head)
     {
         Node ptr = head;
         int count = 0 ;
@@ -173,6 +173,8 @@ public class SinglyLLCreate {
 
         System.out.println(obj.search(obj.head,200));
         obj.Search(obj.head,200);
+
+        System.out.println("no. of node is " + CountNode(obj.head));
 
     }
 }
