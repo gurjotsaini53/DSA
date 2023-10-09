@@ -1,11 +1,12 @@
 package _Hashing;
 
-public class LinearProbingHashTable {
+
+public class QuadraticProbingHashTable {
 
     private int capacity;
     private int [] table;
     private int [] state;
-    public LinearProbingHashTable(int capacity)
+    public QuadraticProbingHashTable(int capacity)
     {
         this.capacity = capacity;
         table =  new int[capacity];
@@ -24,9 +25,13 @@ public class LinearProbingHashTable {
         int index = hash(key);
 
         // linear probing to find the next available slot
+
+
+        int i=0;
         while (state[index] == 1)
         {
-            index  = (index+1)%capacity;         // h'(x) = {h(x) + f(i)) % z
+            index  = (index+(i*i))%capacity ; // h'(x) = {h(x) + f(i*i)) % z
+            i++;
         }
 
         table[index]=key;
@@ -41,7 +46,7 @@ public class LinearProbingHashTable {
         for(int i=0;i<capacity;i++)
         {
             if (state[i]==1)
-            System.out.print(table[i]+" ");
+                System.out.print(table[i]+" ");
             else if (state[i]==-1)
             {
                 System.out.print("Deleted " );
@@ -53,11 +58,12 @@ public class LinearProbingHashTable {
     public boolean search(int value)
     {
         int index = hash(value);
-
+        int i=0;
 
         // linear probing to find the key or an empty slot : keep checking till  next empty slot
         while (state[index]!=0)
         {
+
             if(state[index] ==1 && table[index]==value)
             {
                 // key found
@@ -65,7 +71,8 @@ public class LinearProbingHashTable {
                 return true;
             }
 
-            index = (index+1)%capacity;
+            index = (index+(i*i))%capacity;
+            i++;
         }
         return false;
     }
@@ -81,7 +88,7 @@ public class LinearProbingHashTable {
         int index = hash(value);
 
         // linear probing to find the key : keep checking till next empty slot
-
+      int i=0;
         while (state[index]!=0)
         {
             if (state[index]==1 && table[index]==value)
@@ -90,7 +97,8 @@ public class LinearProbingHashTable {
                 return;
             }
 
-            index=(index+1) % capacity;
+            index=(index+(i*i)) % capacity;
+            i++;
         }
     }
 
@@ -98,7 +106,7 @@ public class LinearProbingHashTable {
 
     // driver code
     public static void main(String[] args) {
-        LinearProbingHashTable hashTable =  new LinearProbingHashTable(10);
+        QuadraticProbingHashTable hashTable =  new  QuadraticProbingHashTable (10);
 
 
         hashTable.insert(10);
