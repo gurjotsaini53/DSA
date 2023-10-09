@@ -1,0 +1,45 @@
+hashing/ hashmap/hashtable
+
+
+key : value pairs
+hashing is a technique for searching.
+-- its uses a hash function to convert a long integer or a string into a small integer.
+
+
+key = 011001233 >>> h(key) >>> hashvalue
+
+
+linear search o(n);
+binary search 0(n);
+----------------------------
+
+requirement = o(1);
+hashing :
+
+
+h(x)  = x%z ;
+
+here x is a key and z is the size of new array.
+
+keys = 2,5,7,8;
+
+h(x) = x%z ;
+
+z=10;
+
+x=2,5,7,8 (keys);
+
+
+h(2) = 2%10 = 2;
+
+h(5) = 2%10 = 5;
+
+
+h(7) = 5%10 = 7;
+
+
+h(8) = 8%10 = 8;
+
+
+------------Hash table -----------------
+
