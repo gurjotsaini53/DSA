@@ -74,24 +74,63 @@ public class HashDataStructure {
 
 
  public void put(Integer key,String value){
+     bucketIndex = getBucketIndex(key);
+     HashNode head  =  buckets[bucketIndex];
 
+     while(head != null)
+     {
+         if (head.key.equals(key))
+         {
+             head.value = value;
+             return;
+         }
+
+         head=head.next;
+     }
+
+
+     HashNode node = new HashNode(key,value);
+     node.next = head;
+     buckets[bucketIndex] = node;
+     size++;
  }
-    public void get(Integer key){
+    public String get(Integer key){
+         bucketIndex = getBucketIndex(key);
+         HashNode head = buckets[bucketIndex];
 
-    }
-    public void  set(Integer key){
+         while (head!=null)
+         {
+             if (head.key.equals(key)) return head.value;
+             head=head.next;
+         }
 
+         return null ; // return null if key not present;
     }
-    public void search(Integer key)
+
+    public String search(Integer key)
+    {
+        bucketIndex = getBucketIndex(key);
+
+        HashNode head = buckets[bucketIndex];
+        while (head !=null)
+        {
+            if (head.key.equals(key))
+            {
+                return head.value;
+            }
+            else{
+                head = head.next;
+            }
+        }
+
+        return "No data found";
+    }
+
+    public String delete(Integer key)
     {
 
     }
-
-    public void delete(Integer key)
-    {
-        
-    }
-    public void show()
+    public void getBucketDetails()
     {
 
     }
