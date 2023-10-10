@@ -128,8 +128,26 @@ public class HashDataStructure {
 
     public String delete(Integer key)
     {
+     bucketIndex = getBucketIndex(key);
+     HashNode head = buckets[bucketIndex];
+     HashNode prev = null;
 
+     while (head!=null)
+     {
+         if (head.key.equals(key)) break;
+
+         prev = head;
+         head=head.next;
+     }
+
+     if (head==null) return null;
+
+     if (prev !=null) prev.next = head.next;
+     else buckets[bucketIndex]=head.next;
+     size--;
+     return head.value;t
     }
+
     public void getBucketDetails()
     {
 
