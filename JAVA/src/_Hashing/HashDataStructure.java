@@ -145,16 +145,46 @@ public class HashDataStructure {
      if (prev !=null) prev.next = head.next;
      else buckets[bucketIndex]=head.next;
      size--;
-     return head.value;t
+     return head.value;
     }
 
     public void getBucketDetails()
     {
+           occupiedBuckets  = 0;
+           emptyBuckets=0;
+           for(int bIndex = 0 ; bIndex<totalBucketSize;bIndex++)
+           {
+               System.out.println("[ "+ bIndex+" ]");
 
+               HashNode head = buckets[bIndex];
+               while(head!=null)
+               {
+                   ++occupiedBuckets;
+                   System.out.println("\t " + head.key + " - " + head.value);
+                   head=head.next;
+               }
+
+               emptyBuckets = totalBucketSize - occupiedBuckets;
+               System.out.println();
+           }
     }
 
 
     public static void main(String[] args) {
 
+
+       HashDataStructure obj = new HashDataStructure(10);
+
+       obj.put(5,"Gurjot");
+       obj.put(6,"Guri");
+        System.out.println(obj.search(6));
+       obj.delete(6);
+       obj.put(1,"Madhav");
+       obj.put(11,"Goyal");
+       obj.put(15,"Ansh");
+
+
+
+       obj.getBucketDetails();
     }
 }
