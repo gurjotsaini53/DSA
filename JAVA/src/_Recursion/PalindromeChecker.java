@@ -18,7 +18,8 @@ public class PalindromeChecker {
         {
             return false;
         }
-         isPalindromeRecursive(str,s++,e--);
+        else
+         return isPalindromeRecursive(str,s++,e--);
     }
 
 
