@@ -9,12 +9,13 @@ public class TowerOfHanoi {
         System.out.println("Moving Disk 1 from ROD "  + source + " To ROD "  + Destination);
         return;}
 
+
         TOH(n-1,source,Destination,Auxilary);
         System.out.println("Moving Disk " + n + " From ROD " + source + " To ROD " + Destination);
         TOH(n-1,Auxilary,source,Destination);
 
     }
     public static void main(String[] args) {
-         TOH(4,'A' , 'B' ,'C');
+         TOH(3,'A' , 'B' ,'C');
     }
 }
