@@ -1,6 +1,6 @@
 package _Stack.Ques;
 
-public class Stack2InArray {
+public class Stack2InArrayOptimized {
 
     private int top1 ;
     private int top2;
@@ -9,7 +9,7 @@ public class Stack2InArray {
     private int arr[];
 
 
-    public Stack2InArray(int capacity)
+    public Stack2InArrayOptimized(int capacity)
     {
         top1=-1;
         top2=capacity;
@@ -88,7 +88,7 @@ public class Stack2InArray {
     }
 
     public static void main(String[] args) {
-      Stack2InArray obj = new Stack2InArray(10);
+      Stack2InArrayOptimized obj = new Stack2InArrayOptimized(10);
 
 
         obj.push1(10);
