@@ -3,7 +3,7 @@ package _GreedyAlgorithms;
 import java.util.Arrays;
 
 
-/
+
 public class IntervalSchedulingProblem {
 
 
@@ -43,6 +43,7 @@ public class IntervalSchedulingProblem {
        {
 
        }
+       return 0;
    }
     public static void main(String[] args) {
 
